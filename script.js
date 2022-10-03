@@ -17,18 +17,17 @@ function makeNewGrid() {
 
 function makeGrid (num){
     if (num > 100) {
-        console.log('Number to high');
+        alert('Number must be under 100')
         return;
     }
-    for (let i = 0; i <= (num * num) -1; i++) {
+    for (let i = 1; i <= (num * num); i++) {
         let div = document.createElement("div");
-        div.setAttribute('style','background-color: green; margin: .5px;');
+        div.setAttribute('style',`background-color: grey; `);
         container.appendChild(div);
+        div.onmouseover = () => {
+            div.setAttribute('style','background-color: black;')
+        }
     }
-    container.setAttribute('style',`width: 960px; height: 500px; display: grid; grid-template-columns: repeat(${num},1fr);`);
+    container.setAttribute('style',`width: 700px; height: 500px; display: grid; grid-template-columns: repeat(${num},1fr);`);
+    
 }
-
-
-
-
-
