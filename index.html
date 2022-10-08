@@ -9,8 +9,22 @@
     <title>Document</title>
 </head>
 <body onload="makeGrid(16)">
-    <input type="text" id="input" placeholder="Add A * A number of pixels" style="width: 200px;">
-    <button onclick="makeNewGrid()" style="width: 200px;">Create new grid</button>
+    <div>
+        <div style="display: flex; flex-direction: column;">
+            <input type="text" id="input" placeholder="Pick number under 100" style="width: 207px;">
+            <button onclick="makeNewGrid()" style="width: 215px;">Create new grid</button>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between">
+            <label for="colorPicker">Pick a pen color!</label>
+            <input type="color" id="colorPicker">
+        </div>
+        <div>
+            <label for="colorPickerBackground">Pick a background color!</label>
+            <input type="color" id="colorPickerBackground" value="#333333">
+        </div>
+    </div>
+    
     
 </body>
 </html>
